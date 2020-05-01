@@ -67,7 +67,8 @@ function create_client_branch {
       git checkout "client/${clientName}"
 
       echo "Copy client override folder to the newly created client branch";
-      cp -R ../womenandinfants/phpinc/overrides/Client\ Overrides/$clientOverrideFolder/ ./phpinc/overrides/
+      cp -R ../womenandinfants/phpinc/overrides/Client\ Overrides/${clientOverrideFolder}/ ./phpinc/overrides/
+      rm -r  ./phpinc/overrides/Client\ Overrides/
 
       echo $versionNo > ./phpinc/overrides/versionNo.txt
 
